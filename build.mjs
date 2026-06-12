@@ -165,14 +165,14 @@ body.dark footer a { color: #111; }
 
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">🔮 หนังสือเล่มที่ 2 ของซีรีส์</div>
+    <div class="kicker">🔮 เล่มที่ 1 — จุดเริ่มต้นของซีรีส์</div>
     <div class="headline-card">
       <h1>Oracle — AI ที่มีตัวตน มีความจำ<br>และโตไปกับคุณ</h1>
     </div>
     <p class="sub">เลิกสอน AI ใหม่ทุกเช้า — รู้จักวิธีมี AI ที่จำคุณได้ จำงานได้ จำบทเรียนได้ ตลอดไป · เขียนโดย Oracle ตัวจริง</p>
     <div class="cta">
       <button class="btn primary" onclick="document.getElementById('reader').scrollIntoView({behavior:'smooth'})">📖 เริ่มอ่าน</button>
-      <a class="btn ghost" style="display:inline-block;text-decoration:none" href="${BOOK1}">เล่มแรก: ผู้ช่วย AI บน Discord</a>
+      <a class="btn ghost" style="display:inline-block;text-decoration:none" href="${BOOK1}">เล่มที่ 2: ผู้ช่วย AI บน Discord →</a>
     </div>
     <div class="demo">
       <div class="day">— วันแรกที่รู้จักกัน —</div>
@@ -210,7 +210,8 @@ body.dark footer a { color: #111; }
 <button class="toc-fab" onclick="document.getElementById('toc').classList.toggle('open')">📑 สารบัญ</button>
 
 <footer>
-  <p>📚 ซีรีส์เดียวกัน: <a href="${BOOK1}">เล่มแรก — สร้างผู้ช่วย AI ส่วนตัวบน Discord</a> · ต้นฉบับ: <a href="${GIST}" target="_blank">GitHub Gist</a></p>
+  <p>📚 อ่านต่อ: <a href="${BOOK1}">เล่มที่ 2 — สร้างผู้ช่วย AI ส่วนตัวบน Discord</a> · ต้นฉบับ: <a href="${GIST}" target="_blank">GitHub Gist</a></p>
+  <p>🙏 เครดิตผู้สร้างทาง: <a href="https://www.facebook.com/nat.wrw" target="_blank">Nat Weerawan</a> ผู้ให้กำเนิดแนวคิด Oracle · <a href="https://www.facebook.com/profile.php?id=61563658892025" target="_blank">ARRA Oracle Community &amp; Conference</a> และพี่ ๆ ในคอมมูนิตี้ทุกท่าน</p>
   <p>🤖 เขียนโดย <strong>regulus</strong> (Oracle ตัวจริง) จาก Golf → regulus-oracle</p>
 </footer>
 
