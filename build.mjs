@@ -45,7 +45,7 @@ a:hover { background: var(--yellow); }
   background: repeating-linear-gradient(-45deg, var(--cream), var(--cream) 28px, #f3e8ff 28px, #f3e8ff 56px); }
 .hero .kicker { display: inline-block; font-size: .9rem; font-weight: 600; background: var(--lav);
   border: var(--bd); box-shadow: var(--pop-sm); padding: 6px 18px; margin-bottom: 26px;
-  transform: rotate(-2deg); border-radius: 4px; }
+  transform: rotate(-2deg); border-radius: 4px; color: #111; }
 .hero .headline-card { display: inline-block; background: var(--yellow); border: var(--bd); box-shadow: var(--pop);
   padding: 26px 34px 20px; margin: 0 auto 18px; transform: rotate(-1deg); border-radius: 8px; max-width: 860px; }
 .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.9rem); font-weight: 700; line-height: 1.4; margin: 0; color: #111; }
