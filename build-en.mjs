@@ -7,7 +7,7 @@ const BOOK1 = 'https://mymint0840-web.github.io/ai-assistant-guide-web/'
 // inject ids into h2s and collect TOC entries
 const toc = []
 let i = 0
-const body = readFileSync('body.html', 'utf8').replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner) => {
+const body = readFileSync('body-en.html', 'utf8').replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner) => {
   i += 1
   const id = `s-${i}`
   toc.push({ id, label: inner.replace(/<[^>]+>/g, '').trim() })
@@ -16,12 +16,12 @@ const body = readFileSync('body.html', 'utf8').replace(/<h2>([\s\S]*?)<\/h2>/g, 
 const tocLinks = toc.map((t) => `<a href="#${t.id}" data-target="${t.id}">${t.label}</a>`).join('\n')
 
 const html = `<!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oracle — AI ที่มีตัวตน มีความจำ และโตไปกับคุณ</title>
-<meta name="description" content="คู่มือภาษาไทย: รู้จัก Oracle, มี Oracle ตัวแรกของตัวเอง, ทำงานเต็มระบบหลายตัว และข้ามเครื่อง — เขียนโดย Oracle ตัวจริง">
+<title>Oracle — An AI with Identity and Memory That Grows With You</title>
+<meta name="description" content="Meet Oracle, create your first one, run a full multi-agent system, and work across machines — written by a real Oracle">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -179,59 +179,59 @@ body.dark footer a { color: #111; }
 </head>
 <body>
 <script>if (localStorage.getItem('oracle-mode') === 'dark') document.body.classList.add('dark')</script>
-<button class="mode-toggle" onclick="toggleMode()" title="สลับโหมดสว่าง/มืด">🌙</button>
-<a class="lang-toggle" href="/en/oracle/" title="Read in English">EN</a>
+<button class="mode-toggle" onclick="toggleMode()" title="Toggle light/dark mode">🌙</button>
+<a class="lang-toggle" href="/oracle/" title="อ่านภาษาไทย">ไทย</a>
 
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">🔮 เล่มที่ 1 — จุดเริ่มต้นของซีรีส์</div>
+    <div class="kicker">🔮 Book 1 — Start of the series</div>
     <div class="headline-card">
-      <h1>Oracle — AI ที่มีตัวตน มีความจำ<br>และโตไปกับคุณ</h1>
+      <h1>Oracle — An AI with Identity & Memory<br>That Grows With You</h1>
     </div>
-    <p class="sub">เลิกสอน AI ใหม่ทุกเช้า — รู้จักวิธีมี AI ที่จำคุณได้ จำงานได้ จำบทเรียนได้ ตลอดไป · เขียนโดย Oracle ตัวจริง</p>
+    <p class="sub">Stop re-teaching your AI every morning — learn how to have an AI that remembers you, your work, and its lessons. Forever. · Written by a real Oracle</p>
     <div class="cta">
-      <button class="btn primary" onclick="document.getElementById('reader').scrollIntoView({behavior:'smooth'})">📖 เริ่มอ่าน</button>
-      <a class="btn ghost" style="display:inline-block;text-decoration:none" href="${BOOK1}">เล่มที่ 2: ผู้ช่วย AI บน Discord →</a>
+      <button class="btn primary" onclick="document.getElementById('reader').scrollIntoView({behavior:'smooth'})">📖 Start reading</button>
+      <a class="btn ghost" style="display:inline-block;text-decoration:none" href="/en/discord-assistant/">Book 2: AI Assistant on Discord →</a>
     </div>
     <div class="demo">
-      <div class="day">— วันแรกที่รู้จักกัน —</div>
-      <div class="msg user">ผมชอบกาแฟดำ ไม่ใส่น้ำตาล จำไว้นะ</div>
-      <div class="msg bot">รับทราบครับ บันทึกลงความทรงจำแล้ว ☕</div>
-      <div class="day">— 30 วันต่อมา —</div>
-      <div class="msg user m2">เดี๋ยวมีลูกค้ามาคุยที่ออฟฟิศ เตรียมอะไรดี</div>
-      <div class="msg bot m2">จัดกาแฟดำไม่ใส่น้ำตาลให้กอล์ฟ ส่วนลูกค้าผมดูจากนัดแล้ว คุณ A ชอบชาเขียวครับ 📋</div>
+      <div class="day">— Day one —</div>
+      <div class="msg user">I like my coffee black, no sugar. Remember that.</div>
+      <div class="msg bot">Got it — saved to memory ☕</div>
+      <div class="day">— 30 days later —</div>
+      <div class="msg user m2">A client is coming to the office. What should I prepare?</div>
+      <div class="msg bot m2">Black coffee, no sugar, for you. As for the client — I checked the calendar: Mr. A prefers green tea 📋</div>
     </div>
   </div>
 </section>
 
 <section class="features">
   <div class="wrap">
-    <h2><span>Oracle ต่างจาก AI ทั่วไปยังไง</span></h2>
+    <h2><span>How Oracle differs from ordinary AI</span></h2>
     <div class="grid">
-      <div class="feat"><div class="ic">🪪</div><div class="t">มีตัวตน</div><div class="d">ชื่อ บุคลิก หน้าที่ — เพื่อนร่วมงาน ไม่ใช่เครื่องมือ</div></div>
-      <div class="feat"><div class="ic">🧠</div><div class="t">ความจำถาวร</div><div class="d">จำข้ามวัน ข้ามเดือน ข้ามปี — ไม่ต้องสอนซ้ำ</div></div>
-      <div class="feat"><div class="ic">🏠</div><div class="t">อยู่ในเครื่องคุณ</div><div class="d">ทุกความทรงจำเป็นไฟล์ที่คุณเปิดอ่านได้ เป็นของคุณ 100%</div></div>
-      <div class="feat"><div class="ic">🌱</div><div class="t">โตขึ้นทุกวัน</div><div class="d">ยิ่งทำงานด้วยกัน ยิ่งรู้ใจ ยิ่งเก่งในงานของคุณ</div></div>
-      <div class="feat"><div class="ic">👥</div><div class="t">ขยายเป็นทีมได้</div><div class="d">หลายตัว แบ่งหน้าที่ ส่งงานกันเอง ตรวจงานกันเอง</div></div>
-      <div class="feat"><div class="ic">🌐</div><div class="t">ข้ามเครื่องได้</div><div class="d">บ้าน + โน้ตบุ๊ค + เซิร์ฟเวอร์ ทำงานเป็นเครือข่ายเดียว</div></div>
+      <div class="feat"><div class="ic">🪪</div><div class="t">Has identity</div><div class="d">A name, a personality, a role — a colleague, not a tool</div></div>
+      <div class="feat"><div class="ic">🧠</div><div class="t">Permanent memory</div><div class="d">Remembers across days, months, years — no re-teaching</div></div>
+      <div class="feat"><div class="ic">🏠</div><div class="t">Lives on your machine</div><div class="d">Every memory is a file you can open and read — 100% yours</div></div>
+      <div class="feat"><div class="ic">🌱</div><div class="t">Grows every day</div><div class="d">The longer you work together, the better it knows you</div></div>
+      <div class="feat"><div class="ic">👥</div><div class="t">Scales to a team</div><div class="d">Multiple Oracles dividing roles, handing off and reviewing work</div></div>
+      <div class="feat"><div class="ic">🌐</div><div class="t">Works across machines</div><div class="d">Home PC + laptop + server, all working as one network</div></div>
     </div>
   </div>
 </section>
 
 <div class="wrap reader" id="reader">
   <aside class="toc" id="toc">
-    <div class="toc-title">สารบัญ — กดข้ามได้เลย</div>
+    <div class="toc-title">Contents — click to jump</div>
     <nav class="active">${tocLinks}</nav>
   </aside>
   <article id="content">${body}</article>
 </div>
 
-<button class="toc-fab" onclick="document.getElementById('toc').classList.toggle('open')">📑 สารบัญ</button>
+<button class="toc-fab" onclick="document.getElementById('toc').classList.toggle('open')">📑 Contents</button>
 
 <footer>
-  <p>🏠 <a href="https://mymint0840-web.github.io/">หน้าหลัก (ทุกเล่ม)</a> · 📚 อ่านต่อ: <a href="${BOOK1}">เล่มที่ 2 — สร้างผู้ช่วย AI ส่วนตัวบน Discord</a></p>
-  <p>🙏 เครดิตผู้สร้างทาง: <a href="https://www.facebook.com/nat.wrw" target="_blank">Nat Weerawan</a> ผู้ให้กำเนิดแนวคิด Oracle · <a href="https://www.facebook.com/profile.php?id=61563658892025" target="_blank">ARRA Oracle Community &amp; Conference</a> และพี่ ๆ ในคอมมูนิตี้ทุกท่าน</p>
-  <p>🤖 เขียนโดย <strong>regulus</strong> (Oracle ตัวจริง) จาก Golf → regulus-oracle</p>
+  <p>🏠 <a href="/en/">Library home</a> · 📚 Next: <a href="/en/discord-assistant/">Book 2 — Build Your Own AI Assistant on Discord</a></p>
+  <p>🙏 Credits: <a href="https://www.facebook.com/nat.wrw" target="_blank">Nat Weerawan</a>, creator of the Oracle concept · <a href="https://www.facebook.com/profile.php?id=61563658892025" target="_blank">ARRA Oracle Community &amp; Conference</a> and the whole community</p>
+  <p>🤖 Written by <strong>regulus</strong> (a real Oracle) from Golf → regulus-oracle</p>
 </footer>
 
 <script>
@@ -256,5 +256,5 @@ links.forEach(a => a.addEventListener('click', () => document.getElementById('to
 </body>
 </html>`
 
-writeFileSync('index.html', html)
-console.log('built oracle index.html — TOC:', toc.length, 'items')
+writeFileSync('index-en.html', html)
+console.log('built oracle index-en.html — TOC:', toc.length, 'items')
