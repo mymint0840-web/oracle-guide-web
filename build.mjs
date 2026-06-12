@@ -210,7 +210,7 @@ body.dark footer a { color: #111; }
 <button class="toc-fab" onclick="document.getElementById('toc').classList.toggle('open')">📑 สารบัญ</button>
 
 <footer>
-  <p>📚 อ่านต่อ: <a href="${BOOK1}">เล่มที่ 2 — สร้างผู้ช่วย AI ส่วนตัวบน Discord</a> · ต้นฉบับ: <a href="${GIST}" target="_blank">GitHub Gist</a></p>
+  <p>📚 อ่านต่อ: <a href="${BOOK1}">เล่มที่ 2 — สร้างผู้ช่วย AI ส่วนตัวบน Discord</a></p>
   <p>🙏 เครดิตผู้สร้างทาง: <a href="https://www.facebook.com/nat.wrw" target="_blank">Nat Weerawan</a> ผู้ให้กำเนิดแนวคิด Oracle · <a href="https://www.facebook.com/profile.php?id=61563658892025" target="_blank">ARRA Oracle Community &amp; Conference</a> และพี่ ๆ ในคอมมูนิตี้ทุกท่าน</p>
   <p>🤖 เขียนโดย <strong>regulus</strong> (Oracle ตัวจริง) จาก Golf → regulus-oracle</p>
 </footer>
